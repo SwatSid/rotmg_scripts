@@ -9,13 +9,15 @@ import numpy as np
 
 def find_confuse_status(img, tpl):
     
-    roi_status_effect_rows = slice(597,616)
-    roi_status_effect_cols = slice(738,822)
+    # roi_status_effect_rows = slice(597,616)
+    # roi_status_effect_cols = slice(738,822)
 
-    roi_status_effect = img[roi_status_effect_rows, roi_status_effect_cols]
+    # roi_status_effect = img[roi_status_effect_rows, roi_status_effect_cols]
     # cv2.imshow('Status effect area', roi_status_effect)
     
-    im = np.atleast_3d(roi_status_effect)
+    # im = np.atleast_3d(roi_status_effect)
+    
+    im = np.atleast_3d(img)
     tpl = np.atleast_3d(tpl)
     H, W, D = im.shape[:3]
     h, w = tpl.shape[:2]
@@ -39,7 +41,7 @@ def find_confuse_status(img, tpl):
     return None
     
 def main():
-    im = cv2.imread('./confuse_img_1.png')
+    im = cv2.imread('./confuse_img_2.png')
     template = cv2.imread('./confuse_icon.png')
 
     print(find_confuse_status(im, template))
