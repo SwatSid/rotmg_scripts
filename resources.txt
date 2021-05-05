@@ -1,0 +1,3 @@
+<LINK> https://stackoverflow.com/questions/29663764/determine-if-an-image-exists-within-a-larger-image-and-if-so-find-it-using-py
+
+Best answer has template matching with cumulative summation
